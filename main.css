@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primaryColor: #ad91cf;
+  --secondaryColor: rgb(196, 169, 230);
+  --blackColor: rgb(46, 46, 71);
+  --borderColor: rgb(46, 46, 71);
+  --inputColor: rgb(241, 241, 241);
+  --successColor: rgb(205, 237, 207);
+  --failureColor: rgb(255, 0, 0);
+}
+
+html {
+  font-size: 90%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+}
+.form-container{
+    width: 30%;
+    min-width: 400px;
+    height: 450px;
+    padding: 0 10px;
+    border-radius: 3px;
+    border: 1px solid rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+    background-color: var(--primaryColor);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.overlay{
+    position: absolute;
+    background: var(--secondaryColor);
+    content: '';
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    z-index: 2;
+    top: 70%;
+    left: -110px;
+
+
+}
+.titleDiv{
+  position: relative;
+  width: 100%;
+  margin: 20px auto 5px;  
+  text-align: center;
+  transform: translateY(-3rem);
+  z-index: 1000;
+}
+.title{
+    color: var(--blackColor);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.rows{
+    display: grid;
+    position: relative;
+    gap: 1rem;
+    z-index: 1000;
+    transform: translateZ(-1rem);
+    padding-bottom: 1rem;
+    width: 100%;
+    margin: auto;
+    align-self: center;
+}
+label{
+    display: block;
+    font-size: 13px;
+    padding-bottom: .285rem;
+    font-weight: 400;
+}
+input[type="text"]{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    text-indent: 15px;
+    opacity: 80%;
+    transition: 0.2s;
+}
+input[type="text"]:hover {
+    opacity: 100%;
+    transform: scale(1.05);
+    
+}
+input[type="text"]:hover:focus{
+    opacity: 100%;
+    transform: scale(1);
+    border: none;
+    outline: none;
+}
+input[type="text"]:focus{
+    opacity: 100%;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+input[type="submit"]{
+    display: block;
+    width: 60%;
+    height: 40px;
+    margin: auto;
+    border-radius: 5px;
+    border: none;
+    transition: 0.2s;
+    margin-top: 20px;
+    color: white;
+    background-color: var(--blackColor);
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    transform:scale(0.95);
+    background-color: white;
+    color: var(--blackColor);
+}
+.registerLink{
+    padding-top: 25px;
+    display: block;
+    font-size: 0.98em;
+    text-align: center;
+}
+.registerLink a{
+    color: white;
+    transition: 0.2s linear;
+}
+.registerLink a:hover{
+    text-shadow: 0px 0px 30px rgb(255, 255, 255);
+}
+.form-container form{
+    width: 80%;
+}
+.form-container-reg{
+    width: 30%;
+    min-width: 400px;
+    height: 600px;
+    padding: 0 10px;
+    border-radius: 3px;
+    border: 1px solid rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+    background-color: var(--primaryColor);
+    overflow: hidden;
+    z-index: 1;
+}
+.form-container-reg form{
+    width: 80%;
+}
+input[type="email"]{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    text-indent: 15px;
+    opacity: 80%;
+    transition: 0.2s;
+}
+input[type="email"]:hover {
+    opacity: 100%;
+    transform: scale(1.05);
+    
+}
+input[type="email"]:hover:focus{
+    opacity: 100%;
+    transform: scale(1);
+    border: none;
+    outline: none;
+}
+input[type="email"]:focus{
+    opacity: 100%;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+.logout h1{
+    color: var(--primaryColor);
+}
+.logoutbtn{
+    background-color: var(--failureColor);
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.logoutbtn a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.success,.addedAccount{
+    text-align: center;
+    padding: 10px 20px;
+    background: var(--successColor);
+    color: var(--blackColor);
+    margin-bottom: 1rem;
+}
+.addedAccount{
+    margin: 0;
+    transform: translateY(100px);
+}
+.fail{
+    position: relative;
+    z-index: 1000;
+    color: var(--failureColor);
+    top: -7%;
+}
+
+
